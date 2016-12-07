@@ -9,7 +9,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         	name: 'main',
             abstract: true,
             url: '/',
-            template: "<h1>Abstract state Main</h1>",
+            template: "<h1>Abstract state Main</h1><div ui-view></div>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                 console.log($stateParams);
             }]
@@ -18,7 +18,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         	name: 'main.details',
             url: ':lang',
             abstract: true,
-            template: "<h1>Abstract state Main.Details</h1>",
+            template: "<h1>Abstract state Main.Details</h1><div ui-view></div>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                     console.log($stateParams);
             }]
@@ -48,7 +48,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         .state( {
         	name: 'main.details.projects',
             url: '/:projectType',
-            template: "<h1>Abstract state Main.Details.Projects</h1>",
+            template: "<h1>Abstract state Main.Details.Projects</h1><div ui-view></div>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                     console.log($stateParams);
             }]
