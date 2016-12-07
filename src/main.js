@@ -18,7 +18,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         	name: 'main.details',
             url: ':lang',
             abstract: true,
-            template: "<h1>Abstract state Main.Details</h1><div ui-view></div>",
+            template: "<h2>Abstract state Main.Details</h2><div ui-view></div>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                     console.log($stateParams);
             }]
@@ -34,7 +34,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         .state({
         	name: 'main.details.blog',
             url: '/blogs/:blogId',
-            template: "<h1>Abstract state Main.Details.Blog</h1>",
+            template: "<h3>State Main.Details.Blog</h3>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                     console.log($stateParams);
             }]
@@ -48,7 +48,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         .state( {
         	name: 'main.details.projects',
             url: '/:projectType',
-            template: "<h1>Abstract state Main.Details.Projects</h1><div ui-view></div>",
+            template: "<h3>State Main.Details.Projects</h3><div ui-view></div>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
                     console.log($stateParams);
             }]
@@ -66,9 +66,9 @@ myApp.config(['$stateProvider', '$urlRouterProvider', "$locationProvider", funct
         .state( {
         	name: 'main.details.projects.detailed',
             url: '/:projectNumber',
-            template: "<h1>Abstract state Main.Details.Projects.Detailed</h1>",
+            template: "<h4>State Main.Details.Projects.Detailed</h4>",
             controller: ['$scope', '$stateParams', function($scope, $stateParams) {
-                    console.log($stateParams);
+                    console.log($stateParams);                    
             }]
             /*views: {
                 '@main.details': {
